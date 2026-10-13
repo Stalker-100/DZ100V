@@ -1,9 +1,10 @@
-spisokKino = ['Крепкий орешек', 'Назад в будущее', 'Таксист', 'Леон', 'Богемская рапсодия', 'Город грехов', 'Мементо', 'Отступники', 'Деревня']
-joinKino = []
+count = int(input("Количество видеокарт: "))
 
-vvod = input('введите любимый фильм: ')
-if vvod in spisokKino:
-joinKino.append(vvod)
-print(f'ваш любимый фильм! {vvod}')
-else:
-print('неверный фильм!')
+cards = [int(input(f"{i + 1} Видеокарта: ")) for i in range(count)]
+
+print(f"старый список видеокарт: {cards}")
+
+max_card = max(cards)
+new_cards = [card for card in cards if card != max_card]
+
+print(f"новый список видеокарт: {new_cards}")
